@@ -87,7 +87,7 @@ footer{background:var(--choc);color:#f3e3d3;padding:40px 0 24px}footer h3{color:
 <footer><div class="wrap"><div class="fcols">
 <div><h3>🥐 Sweet Crumbs Bakery</h3><p>A neighborhood bakery making small batches by hand, every morning.</p></div>
 <div><h3>Explore</h3><a href="#/menu">Our Menu</a><a href="#/cakes">Custom Cakes</a><a href="#/about">About Us</a><a href="#/contact">Contact</a></div>
-<div><h3>Visit</h3><span>[Your street address]<br>Tue–Sat 7am–6pm · Sun 8am–2pm<br>[Phone] · [Email]</span></div>
+<div><h3>Visit</h3><span> 1114 north glendale ave<br>Tue–Sat 7am–6pm · Sun 8am–2pm<br> (818)-667-6767 · oursweetcrumbs@gmail.com</span></div>
 <div><h3>Follow</h3><a href="#/contact">Instagram</a><a href="#/contact">Facebook</a></div>
 </div><p class="demo" style="margin-top:24px;color:#e8d4c0">© 2026 Sweet Crumbs Bakery. Fictional demo business.</p></div></footer>
 <dialog id="dlg"></dialog><div id="toast" role="status" aria-live="polite"></div>
@@ -134,9 +134,9 @@ cart:()=>{const ids=Object.keys(cart).filter(i=>cart[i]>0);const sub=ids.reduce(
 if(!ids.length)return `<section><div class="wrap"><h1>Your cart</h1><p>Your cart is empty. Pick something warm from the oven.</p><a class="btn" href="#/menu">Browse the menu</a></div></section>`;
 return `<section><div class="wrap"><h1>Your cart</h1><div class="cols"><div>${ids.map(i=>{const p=P.find(x=>x.id==i);return `<div class="cartrow"><div class="t" style="background:${p.bg}">${p.e}</div><div><strong>${esc(p.n)}</strong><br>${usd(p.p)}<br><span class="qty"><button data-dec="${i}" aria-label="Decrease quantity">−</button><span>${cart[i]}</span><button data-inc="${i}" aria-label="Increase quantity">+</button></span></div><div><strong>${usd(p.p*cart[i])}</strong><br><button class="icon" data-rm="${i}" aria-label="Remove ${esc(p.n)}">🗑</button></div></div>`}).join('')}</div>
 <form class="sum" id="checkout" novalidate><h3>Checkout (demo)</h3><p class="demo">Demo only: no payment is taken and no order is sent. A backend and payment provider are needed to go live.</p>
-<label for="cn">Name</label><input id="cn" autocomplete="name"><div class="err" data-e="cn"></div>
-<label for="ce">Email</label><input id="ce" type="email" autocomplete="email"><div class="err" data-e="ce"></div>
-<label for="cp">Phone</label><input id="cp" type="tel" autocomplete="tel"><div class="err" data-e="cp"></div>
+<label for="cn">sweet crumbs</label><input id="cn" autocomplete="name"><div class="err" data-e="cn"></div>
+<label for="ce">oursweetcrumbs@gmail.com</label><input id="ce" type="email" autocomplete="email"><div class="err" data-e="ce"></div>
+<label for="cp">(818)-667-6767</label><input id="cp" type="tel" autocomplete="tel"><div class="err" data-e="cp"></div>
 <label for="cm">Pickup or delivery</label><select id="cm"><option>Pickup</option><option>Delivery</option></select>
 <label for="cd">Date and time</label><input id="cd" type="datetime-local"><div class="err" data-e="cd"></div>
 <label for="cx">Order notes</label><textarea id="cx" rows="2"></textarea>
